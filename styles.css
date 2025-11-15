@@ -236,3 +236,60 @@ textarea {
   top: 0; left: 50%;
   transform: translateX(-50%);
 }
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+  #conf-purchase {
+    width: 90%;       /* full width with some padding */
+    margin-left: 5%;  /* center the form */
+    padding: 15px;
+    font-size: 16px;  /* make text readable */
+  }
+
+  #phone-price, #conf-number, #phone-type {
+    width: 100%;       /* full width input fields */
+    height: 35px;      /* taller for touch screens */
+    margin-bottom: 10px;
+  }
+
+  #formprice, #formphone {
+    width: 100%;       /* full width buttons */
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  #profile-pic {
+    width: 150px;      /* smaller profile pic */
+    height: 150px;
+    margin: 0 auto;    /* center it */
+    display: block;
+  }
+
+  #userbtn, #cnabout {
+    width: 80%;        /* make buttons fit screen */
+    margin: 10px auto; /* center buttons */
+    padding: 10px;
+  }
+
+  textarea {
+    width: 90%;        /* fit text area on mobile */
+    height: 120px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  #appfriends {
+    flex-direction: column; /* stack items vertically */
+    gap: 15px;
+    font-size: 20px;
+  }
+
+  #username {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #wrongusername {
+    font-size: 16px;
+    padding: 10px;
+  }
+  }
