@@ -1,0 +1,99 @@
+
+    .slide {
+        animation: sliding 5s ease;
+    }
+
+@keyframes sliding {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+    to {
+        transform: translateX(o);
+        opacity: 1;
+    }
+
+    .freq {
+        animation: right-sliding 2s ease;
+
+    }
+    @keyframes right-sliding  {
+        from {
+            transform : translateX(100px);
+            opacity : 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1 ;
+        }
+    }
+
+
+    .pop {
+        animation: pop-up 3s ease-in;
+
+    }
+    @keyframes pop-up {
+        from{
+            width: 10px; 
+            opacity: 0;
+        }
+        to {
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .phone-card {
+        animation: appear 0.7s ease-out;
+    }
+    @keyframes appear {
+        0%{
+            width: 5px;
+            transform: scale(0.2);
+            opacity: 0;
+
+        }
+        25% {
+            width: 10px;
+            transform: scale(1.4);
+            opacity: 0.25;
+        }
+        50% {
+            transform: scale(0.6);
+            width: 25px;
+            opacity: 0.5;
+        }
+        75% {
+            transform: scale(0.8);
+            width: 50px;
+            opacity: 0.75;
+        }
+        100% {
+            transform: scale(1.o);
+            width: auto;
+            opacity: 1;
+        }
+    }
+    .freq:hoover {
+        display: none;
+       box-shadow: 0 0  20px rgba(red, green, blue, alpha),
+                   0 0  20px rgba(red, green, blue, alpha);
+
+       
+    }
+.pop-down {
+    display :grid;
+    animation : pop-down-anm 0.9s ease-out;
+}
+@keyframes pop-down-anm {
+from{
+    transform: translateY(100%);
+    opacity: 0;
+}
+to {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
