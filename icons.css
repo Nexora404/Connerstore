@@ -1,0 +1,27 @@
+iframe {
+    width: 500px;
+    height: 500px;
+    
+}
+
+
+
+
+
+
+.foot {
+    display: grid;
+    gap: 10px;
+}
+
+.foot-content {
+    display: flex;
+    gap: 50%;
+
+}
+.foot-right {
+    display: grid;
+    gap:15px;
+    color-scheme: initial;
+    font-family:'Arial Narrow Bold', sans-serif;
+}
