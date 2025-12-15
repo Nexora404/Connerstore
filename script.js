@@ -1,4 +1,3 @@
-//search bar
 function searchphone() {
     let input = document.getElementById('search').value.toLowerCase();
     let phones = document.getElementsByClassName("phone-card");
@@ -82,7 +81,11 @@ function validateform(e){
     const  cmf = document.getElementById('conf');
     
     if (accnumber.length === 10 ) {
-        alert('paymt'+ {accnumber});
+     //   addEventListener(  "DOMContentLoaded",   ()   => {})
+        alert('yes')
+         const confmsg = document.getElementById('confirm-msg');
+    confmsg.style.display= 'flex';
+        cost()
        // document.getElementById('conf').style.display = "flex";
         return true;
         
@@ -98,3 +101,52 @@ function validateform(e){
 //document.getElementById('formphone').textcontent = selectedphone.value;
 
 //scripts for profile
+
+//count down scripts 
+                                                                                                                               
+document.addEventListener('DOMContentLoaded', function()  { 
+
+ let endtime = localStorage.getItem('countdownend')   
+ if (!endtime) {
+
+  endtime = new Date().getTime() +5  * 60 * 1000 ;
+  localStorage.setItem('countdownend', endtime);
+  
+} else {
+    endtime = Number(endtime);
+}
+
+const countdown = document.getElementById('countdown');
+
+const timer = setInterval(()  => {
+    const now = new Date().getTime();
+    const distance = endtime - now ;
+    if (distance <= 0) {
+        clearInterval(timer);
+        countdown.innerText = "time is up";
+        
+        return;
+    }
+    let minutes = Math.floor(distance / 600000)
+    const seconds = Math.floor((distance % 60000) / 1000);
+    countdown.innerText =  String(minutes).padStart(2, '0') + ":" + 
+    String(seconds).padStart(2, '0') ;
+
+     console.log(minutes, seconds);
+     if ( minutes == 5 ) {
+
+     }
+}, 1000) ;
+  
+  });
+
+//complete cost
+function cost() 
+{
+    const confmsg = document.getElementById('confirm-msg');
+    confmsg.style.display= 'flex';
+   // closeform()
+   // setTimeout(()  => {
+     //   confmsg.style.display='none';
+//    },1000)
+}
