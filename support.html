@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta http-equiv="CONTENT-TYPE"  content="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="icons.css">
+        <link rel="stylesheet" href="animation.css">
+  
+    </head>
+</html>
+<body id="content">
+    <h1 class="slide">  CONNERSTORE <br>
+         SUPPORT SECTION </h1> 
+    <a href="index.html">back home </a>
+    <br>
+    <input type="text" onkeyup="searchsol()" id="findsol" class="pop"
+           placeholder="search solution for your problem here "  >
+
+
+    <p class="welcome">
+        welcome to the conner store support page we are here to make sure you enjoy the services that 
+        we offer 
+    </p>
+    <div class="freq" >
+        <h2 id="gen" style="font-size: larger;">
+            <b>
+                FREQUENTLY ASKED QUESTIONS (FAQ)
+            </b>
+        </h2>
+        <br>
+        <div class="login_issue solution "> <p> <b> 1. login and accout issue </b> </p>
+        <p class="sol_login"> 
+            if you are facing problems loging in to your account you should contact customer 
+            support for help.
+            <br>
+            before that you can try changing browsers and make sure you are connected to the 
+            internet. this problem occurs rearly . 
+        </p>
+        </div>
+    
+        <div class="payment solution ">
+            <p>
+                <b> 2. payment and billing </b>
+            </p>
+            <p class="sol_pay">
+                you might have paid for the device but its not yet reflecing not to worry 
+                if this occurs you can easily fix it by refreshing the website reduce stress 
+                your money cant be lost.
+                <br>
+                <b> we are working hard to make sure we fix and better our products </b>
+            </p>
+        </div>
+        <div class="cancelation solution" >
+            <p> <b> 3. reverse amd cancelation </b>
+            </p>
+            <p class="sol_rev">
+                you might make a mistake when purchasing a product you are allowed to 
+                cancel it within 24 hours of the purchase.
+                <br>
+                we will call you to ask you if you are sure about the product you want to buy
+                <br>
+                <p class="reverse"> 
+                    we dont allow reversing of payments if already delivered or confirmed via call.
+                    BE CAREFUL WHEN YOU MAKE PURCHACES 
+                </p>
+            </p>
+        </div>
+        <div class="suspension solution ">
+            <p>
+                <b> 4. why is my accuont suspened ? </b>
+
+            </p>
+            <p class="sus_sol">
+                if your account is susprnded you might have gone against the terms of usage dont worry thats not the end of you.... 
+                <br>
+                you can still ask for review and we may even give you another chancee 
+            </p>
+        </div>
+
+    </div>   
+    <div class="knowledge" id="know">
+        <h2 style="font-size: 200%;
+           color: hsl(167, 80%, 34%);
+           text-align: center;
+           
+           "> Knowledge Base </h2>
+        <div>
+            <b>
+                Getting started 
+            </b>
+            <p>
+                <i> follow this instuctions to get started to use the website</i>
+                <br>
+                <b> 
+                    1.Account creation
+                </b>
+                <br>
+                go to the account creation page to create an account 
+                <i> you can still make purchases without an account</i>
+                <a href="account.html">account </a> 
+                <br>
+                <b> 2. Security  and privacy </b> 
+                You are adviced to set a strong and secure password which will protect your acccount.
+                <br>
+                <strong style="color: red;" >
+                    we are not responsible if you share your password to someone</strong>
+                <b> 3. scams</b>
+                out there they are many scammers we only call from 0111291593 
+                <br>
+                *we will never ask for your : 
+                -password <br>
+                -email adress <br>
+                -account ballance <br>
+                
+            <P class="conc"> we hope this helps</P>
+
+                
+            </p>
+        </div>
+
+    </div>
+    <h2 style="color: crimson;
+    font-size: larger;
+    font-family: cursive;">Oppening Hours </h2>
+    <table id="table" border="1">
+        <thead>
+            <th>oppening hours </th>
+        </thead>
+      <tr>
+        <th> Day </th>
+        <th>opening time</th>
+        <th>closing time</th>
+      </tr>  
+      <tr>
+        <td>monday</td>
+        <td> 8:ooam</td>
+        <td> 5:00pm</td>
+      </tr>  
+      <tr>
+        <td>tuesday</td>
+        <td>8:ooam</td>
+        <td>5:00pm</td>
+        
+      </tr>
+      <tr> 
+        <td>wednsday</td>
+        <td>8:00 am</td>
+        <td >5:00pm</td>
+      </tr>
+      <tr>
+        <td> thursday </td>
+        <td>8:00 am</td>
+        <td>5:00 pm</td>
+      </tr>
+    </table>
+    <br>
+    <i> we dont open on friday saturday and sundays</i>
+
+    <div class="location">
+        <h2 style="font-family: cursive;
+        font-size: larger;
+        color: crimson;">Location</h2>
+        we are have several locations where you can find us <br>
+        <b>1. Agape plaza nairobi CBD </b>
+        <iframe src="" title="CBD">
+         failed to get location 
+        </iframe>
+        <br>
+        <b> 2. smart towers london united kingdom</b>
+        <iframe>
+
+        </iframe>
+    </div>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function searchsol() {
+    let searchText = document.getElementById("findsol").value.toLowerCase();
+    let solutions = document.querySelectorAll(".solution");
+
+    solutions.forEach(item => {
+        let text = item.textContent.toLowerCase();
+
+        if (text.includes(searchText)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    // Optional background color indicator
+    const content = document.getElementById("content");
+    if (searchText.trim() === "") {
+        content.style.backgroundColor = "white";
+    } else {
+        content.style.backgroundColor = "yellow";
+    }
+}
+
+let know = document.getElementById('know');
+know.style.display = 'none'; 
+setTimeout(()=>{ 
+    know.style.display = 'grid';
+
+requestAnimationFrame(() => {
+know.classList.add('pop-down') ;   
+});
+},300)
+
+
+
+</script>
+<footer>
+    <h2 
+     style="font-family: cursive;
+     color: red; 
+     font-size: 80px;">Contact Us</h2>
+   find us on 
+<br>
+<div class="foot-content">
+<div class="foot">
+   <i class="fab fa-whatsapp" 
+   style="font-size: 48px;
+   color: green;"><a href="">whatsapp</a></i>
+    <br>
+    <i class="fab fa-instagram"
+     style="font-size: 48px;
+     color: purple;
+            ">
+        <a href="">instagram</a>
+    </i>
+    <br>
+    <i class="fab fa-facebook"
+    style="font-size: 48px;
+        color: blue;">
+        <a href="">facebook</a>
+    </i>
+    <br>
+    <i class="fab fa-tiktok"
+    style="font-size: 48px;
+    ">
+        <a href="">tiktok</a>
+    </i>
+    <br>
+    <i class="fab fab-x"></i>
+    <br>
+
+</div>
+<div class="foot-right">
+    &copy; conner store all rights reserved 
+    <br>
+    <p>
+    For complains call ;
+    0111291593
+    <br>
+    P.O. Box 1-10100 Nairobi Kenya 
+    <br>
+    Email : connerstore@gmail.com
+    <br>
+    &copy; KEBS authorised product 
+
+    </p>
+</div>
+</div>
+</footer>
+
+
+
