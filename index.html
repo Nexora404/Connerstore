@@ -4,9 +4,10 @@
 <head>
   <title>commercial</title>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
+  <title>conner store</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="animation.css">
+  <link rel="stylesheet" href="icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
 
@@ -19,7 +20,7 @@
       <a class="nav-item" href="account.html">account</a>
     </li>
   </nav>
-  
+
   <i class="fas fa-tablet "></i>
   <h2 id="tittle" class="slide">CONNER STORE</h2>
     
@@ -29,9 +30,16 @@
   <p style=" 
   color: blueviolet;"> Time left till offer ends </p>
   <div id="countdown"></div>
+  <p style="margin-bottom: 25px;">
+  dont have an account <a href="login.html">sign </a>
+
+  </p>
+   <div class="loadingstart"></div>
   <main>
-    <div id="iphone" class="phone-card">od
-    Phone: I-phone 16
+    
+
+    <div id="iphone" class="phone-card">
+    
     <img src="iphone.jpg"
      alt="Phone Image"
      width="300">
@@ -178,13 +186,169 @@
   <br>
   <button id="oneplusbtn" onclick="buy('oneplus')">Purchase</button>
 </div>
+<div id="nokia" class="phone-card">
+  <img src="nokia.jpg" alt="Phone Image" width="300">
+
+  <h3>Nokia X30 5G</h3>
+
+  <b>Price: KSh 78,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 256 GB <br>
+  Charge Speed: 33W <br>
+
+  <label for="nokiaQty">Quantity:
+    <select id="nokiaQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label>
+  <br>
+
+  <button id="nokiabtn" onclick="buy('nokia')">Purchase</button>
+</div>
+
+<div id="sony" class="phone-card">
+  <img src="sony.jpg" alt="Phone Image" width="300">
+
+  <h3>Sony Xperia 5 V</h3>
+
+  <b>Price: KSh 120,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 256 GB <br>
+  Charge Speed: 30W <br>
+
+  <label for="sonyQty">Quantity:
+    <select id="sonyQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label>
+  <br>
+
+  <button id="sonybtn" onclick="buy('sony')">Purchase</button>
+</div>
+<div id="google" class="phone-card">
+  <img src="google.jpg" alt="Phone Image" width="300">
+
+  <h3>Google Pixel 7</h3>
+
+  <b>Price: KSh 95,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 128 GB <br>
+  Charge Speed: 30W <br>
+
+  <label for="googleQty">Quantity:
+    <select id="googleQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label>
+  <br>
+
+  <button id="googlebtn" onclick="buy('google')">Purchase</button>
+</div>
+<div id="motorola" class="phone-card">
+  <img src="motorola.jpg" alt="Phone Image" width="300">
+
+  <h3>Motorola Edge 40</h3>
+
+  <b>Price: KSh 65,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 256 GB <br>
+  Charge Speed: 68W <br>
+
+  <label for="motorolaQty">Quantity:
+    <select id="motorolaQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label>
+  <br>
+
+  <button id="motorolabtn" onclick="buy('motorola')">Purchase</button>
+</div>
+<div id="asus" class="phone-card">
+  <img src="asus.jpg" alt="Phone Image" width="300">
+
+  <h3>ASUS Zenfone 10</h3>
+
+  <b>Price: KSh 110,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 256 GB <br>
+  Charge Speed: 30W <br>
+
+  <label for="asusQty">Quantity:
+    <select id="asusQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label>
+  <br>
+
+  <button id="asusbtn" onclick="buy('asus')">Purchase</button>
+</div>
+<div id="huawei" class="phone-card">
+  <img src="huwaiwei.jpg" alt="Phone Image" width="300">
+  <h3>Huawei Nova 11</h3>
+  <b>Price: KSh 72,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 256 GB <br>
+  Charge Speed: 66W <br>
+  <label for="huaweiQty">Quantity:
+    <select id="huaweiQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label><br>
+  <button id="huwaweibtn" onclick="buy('huawei')">Purchase</button>
+</div>
+<div id="zte" class="phone-card">
+  <img src="axon.jpg" alt="Phone Image" width="300">
+  <h3>ZTE Axon 40</h3>
+  <b>Price: KSh 68,000</b><br>
+  RAM: 8 GB <br>
+  ROM: 128 GB <br>
+  Charge Speed: 65W <br>
+  <label for="zteQty">Quantity:
+    <select id="zteQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label><br>
+  <button id="ztebtn" onclick="buy('zte')">Purchase</button>
+</div>
+<div id="honor" class="phone-card">
+  <img src="honor.jpg" alt="Phone Image" width="300">
+  <h3>Honor 90</h3>
+  <b>Price: KSh 75,000</b><br>
+  RAM: 12 GB <br>
+  ROM: 256 GB <br>
+  Charge Speed: 66W <br>
+  <label for="honorQty">Quantity:
+    <select id="honorQty" onchange="updateTotal()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label><br>
+  <button id="honorbtn" onclick="buy('honor')">Purchase</button>
+</div>
+
   </main>
-  <form  id="oder-form"  onsubmit="return validateform(event)" action="oders.html"
-  target="_blank" method="GET">
+  <form  id="oder-form"  onsubmit="return validateform()" action="oders.html"
+  target="_blank" method="get">
     
     <button id="cancel" onclick="closeform()">x</button>
     <h3 id="paymthd"> Payment method</h3>
     <label for="formphone"> 
+      <p id="validating"> validation in process..... please wait</p>
       <p id="formphone"> </p>
       
     </label>   
@@ -201,9 +365,10 @@
       </label>
     <br>
     <label >Enter account/phone number :
-      <input id="number" type="number" name="accnumber"minlength="10" placeholder="acc/phone number">
+      <input id="accnumber" type="number" name="accnumber"minlength="10" placeholder="acc/phone number">
       <br>
-      <button type="submit" onclick="cost()" id="pay" value="complete pay" > complete pay 
+      <p class="wrongnu" id="wrongnu">The number you entered is invalid or doent have 10 digits</p>
+      <button type="submit"  id="pay" value="complete pay" > complete pay 
         </button>
     </label>
     </form>
@@ -213,43 +378,7 @@
 
  
   <script>
-
-    ocument.addEventListener('DOMContentLoaded', function()  { 
-
- let endtime = localStorage.getItem('countdownend')   
- if (!endtime) {
-
-  endtime = new Date().getTime() +5  * 60 * 1000 ;
-  localStorage.setItem('countdownend', endtime);
-  
-} else {
-    endtime = Number(endtime);
-}
-
-const countdown = document.getElementById('countdown');
-
-const timer = setInterval(()  => {
-    const now = new Date().getTime();
-    const distance = endtime - now ;
-    if (distance <= 0) {
-        clearInterval(timer);
-        countdown.innerText = "time is up";
-        
-        return;
-    }
-    let minutes = Math.floor(distance / 600000)
-    const seconds = Math.floor((distance % 60000) / 1000);
-    countdown.innerText =  String(minutes).padStart(2, '0') + ":" + 
-    String(seconds).padStart(2, '0') ;
-
-     console.log(minutes, seconds);
-     if ( minutes == 5 ) {
-
-     }
-}, 1000) ;
-  
-  });
-
+    
   </script>
 
 
@@ -332,23 +461,24 @@ function closeform() {
     document.getElementById("oder-form").style.display = "none";
     
 }
-function validateform(e){
+function validateform(){
     
-    const accnumber = document.getElementById('number').value;
+    const accnumber = document.getElementById('accnumber').value.trim();
     const  cmf = document.getElementById('conf');
     
-    if (accnumber.length === 10 ) {
-        alert('paymt'+ {accnumber});
-       // document.getElementById('conf').style.display = "flex";
-        return true;
+    if ( accnumber == "" || accnumber.length !== 10 ) {
+       // window.addEventListener(  "DOMContentLoaded",   ()   => {})
+        document.getElementById('wrongnu').style.display="flex";
         
-    } else {
-        alert('th');
+        
         return false;
         
+    } else {
+       document.getElementById('wrongnu').style.display='none';
+        return true;
+        
     }
-    
-}
+  }
   </script>
 <script src="script.js"  ></script>
 </html>
