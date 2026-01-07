@@ -3,12 +3,6 @@ iframe {
     height: 500px;
     
 }
-
-
-
-
-
-
 .foot {
     display: grid;
     gap: 10px;
@@ -24,4 +18,140 @@ iframe {
     gap:15px;
     color-scheme: initial;
     font-family:'Arial Narrow Bold', sans-serif;
+}
+
+
+
+/* account style */ 
+#account-creation, #login {
+    display: grid ;
+    background: linear-gradient(180deg, grey, hsl(64, 100%, 25%));
+   margin-bottom: 17px; 
+   align-items: center;
+   justify-content: center;
+   width:50% ;
+   margin: 0 auto;
+   gap: 10px;
+   border-radius: 15px;
+   animation:formrotate 2s ease;
+
+}
+@keyframes formrotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(310deg);
+    }
+}
+#login {
+    display: none;
+}
+.power {
+    background-color: #00ff62;
+    padding: 12px;
+    position: fixed; top: 50%; left: 2px;
+    border-radius: 14px;
+    color : #0b0da1;
+}
+.sub {
+    background-color: green;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    height: 100%;
+
+
+}
+#sub:hover {
+    box-shadow: 0 0 12px hsl(61, 100%, 50%),
+                        0 0 12px rgb(255, 51, 0) ;
+}
+#switch {
+    width: fit-content;
+
+}
+
+.form-content {
+    background-color: hsl(135, 18%, 87%);
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    border: black solid 3px;
+
+}
+.form-content:focus {
+    box-shadow: 0 0 12px rgb(255, 51, 0);
+    border-radius: 19px;
+    border: green solid 3px;
+    padding:20px ;
+}
+label {
+    color:hsl(221, 96%, 45%);
+    font-size: larger;
+
+}
+h2 {
+    font-family: cursive;
+    color: red
+    ;
+    font-size: 60px;
+}
+
+
+
+
+
+
+
+/* profile loader animation */ 
+.spinner {
+    width: 250px;
+    margin: 0 auto;
+    border-width: 100px;
+    height: 250px;
+    border-radius: 50%;
+    border-bottom: red solid 4px;
+    border: soild green 15px;
+    border-top: 4px solid blue;
+    animation: loading 2s infinite;
+
+}
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.loadingmsg {
+    color: hwb(145 4% 37%);
+    margin: 0 auto;
+    margin-top: 12px;
+    text-shadow: hsl(234, 100%, 50%);
+    text-align: center;
+    font-size: xx-large;
+    animation: textchange 2s infinite;
+
+}
+@keyframes textchange {
+    0%{
+      color: #00ff62;
+      font-family: cursive;
+
+    }
+    20% {
+      color: #0b0da1;
+      font-family: impact;
+    }
+    40% {
+      color: aqua;
+      font-family: serif;
+    }
+    60% {
+color: red;
+    }
+    80% {
+    color: chocolate;
+    } 
+    100%{
+    color: green;
+    }
 }
