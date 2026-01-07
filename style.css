@@ -64,7 +64,8 @@ body {
   text-align: center;
 }
 #iphonebtn, #samsungbtn, #tecnobtn, #infinixbtn,
- #oppobtn, #oneplusbtn{
+ #oppobtn, #oneplusbtn, #realmebtn , #nokiabtn ,
+  #sonybtn  ,#googlebtn , #ztebtn, #honorbtn, #motorolabtn,  #asusbtn , #honorbbtn, #huwaweibtn {
   background-color: orange;
   width: fit-content;
   padding: 20px;
@@ -104,7 +105,7 @@ main {
   display: none;
 }
 #oder-form {
-  background: url("formbackground.jpg") no-repeat center center/cover ;
+  background: linear-gradient(12deg, orange, #7bff00);
   display: flex;
   flex-direction: row ;
   width: 60%;
@@ -121,36 +122,36 @@ main {
   margin-bottom: auto;
   position: fixed;
   top: 0; left: 0;
-  box-shadow: 0 0 15px rgba(225, 0, 0, 0.8),
+  box-shadow: 0 0 25px rgba(225, 0, 0, 0.8),
   0 0 30px rgba(0, 0, 225, 0.8);
 }
   .showform {
     
   display:  block;
-  animation:  neonswing 0.5s ease forwards ;
+  animation:  neonswing 2s ease forwards ;
   }
 @keyframes neonswing {
   0% {
     opacity: 0;
-    transform: translateY(-90px) rotate(-9deg) scale(0.95);
+    transform: translateY(0) rotate(0) scale(1);
   }
   25% {
     opacity: 0.7;
-    transform: translateY(-40px) rotate(6deg) scale(1.02);
+    transform: translateY(18px) rotate(8deg) scale(1.05);
   }
   50%{
     opacity: 1;
-    transform: translateY(30px) rotate(12deg) scale(1.02);
+    transform: translateY(-12px) rotate(-6deg) scale(0.92);
     
     
   }
   70%{
-    transform: translateY(-14px) rotate(-12deg) scale(0.99);
+    transform: translateY(-24px) rotate(-12deg) scale(0.73);
     
     
   }
   85% {
-    transform: translateY(20px) rotate(11deg) scale(1.01);
+    transform: translateY(6px) rotate(3deg) scale(1.02);
     
   }
   100% {
@@ -160,9 +161,39 @@ main {
     
   }
 }
+.wrongnu {
+  color: red;
+  display: none;
+  animation: blink 2s ease;
+}
+@keyframes blink {
+  0% {
+    color: red;
+    opacity: 1;
+    
+  } 
+  25% {
+      color: #100dd8;
+      opacity: 0;
+  }
+  50% {
+    color: red;
+    opacity: 1;
+
+  }
+  75% {
+    color: white;
+    opacity: 0;
+  }
+  100%{
+      color: red;
+      opacity: 1;
+  }
+}
 
 #bankoptn, select {
   border-radius: 15px;
+  font-family: cursive;
 }
 #cancel {
   width: 22px;
@@ -175,8 +206,32 @@ main {
   right: 11px;
   top: 6px;
 }
+#validating {
+  color: hsl(244, 100%, 50%);
+  display: none;
+  animation: val 3s ease;
+}
+@keyframes val {
+  0%{
+    color: black; 
 
-#number {
+  }
+  25%{
+    color: #00ffd5;
+    background-color: beige;
+  }
+  50%{
+    color: #100dd8;
+  }
+  75%{
+    color: black;
+  }
+  100%{
+    color: #100dd8;
+  }
+}
+
+#accnumber {
   margin-left: 60px;
   border-radius: 12px;
   padding:  3%;
@@ -233,6 +288,8 @@ label  {
   background:  blue;
   color : white;
 }
+
+/*for profile */
 #profile-pic {
   background-color: red;
   height: 200px;
@@ -423,7 +480,7 @@ transform: translateX(-50%);
   padding: 20px;
   width: fit-content;
 }
-table {
+#timetable {
   margin-top: 100px;
   background: linear-gradient(190deg,yellow, rgb(14, 129, 182));
   width: 75%;
@@ -460,4 +517,60 @@ footer a {
   height: 22px;
   width: 16px;
   color: brown;
+}
+/* oders style */ 
+.chart-2 {
+  width: 1000px;
+  height: 1000px;
+  
+}
+.explanation-heading{
+  display: grid;
+  font-family:cursive ;
+  text-align: center;
+}
+.aside-content{
+  display: flex;
+  gap: inherit;
+}
+.asidetext {
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  margin-left: 20px;
+
+}
+.conc {
+  font-family: cursive;
+  color: red;
+}
+.abc {
+  font-size: 50px;
+  color: blue;
+}
+.message-pos {
+  display: grid;
+}
+.comments {
+  background: linear-gradient(180deg, orange, #00ffd5);
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 0 40px #0003c8cc;
+  width: fit-content;
+  will-change: scroll-position;
+  backdrop-filter:inherit ;
+  margin: 19px;
+}
+.name {
+  color: red;
+  text-align: start;
+  
+  text-transform: lowercase;
+}
+.source {
+  font-size: 50px;
+  font-family: cursive;
+  color: hsla(160, 94%, 50%, 0.801);
+}
+#oders-status {
+  color: red;
 }
