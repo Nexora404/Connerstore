@@ -1,10 +1,49 @@
 
+.loadingstart {
+    color: hwb(145 4% 37%);
+    margin: 0 auto;
+    margin-top: 12px;
+    text-shadow: hsl(234, 100%, 50%);
+    text-align: center;
+    font-size: xx-large;
+    animation: lchange 2s ease;
+
+}
+@keyframes lchange {
+    0%{
+      color: #00ff62;
+      font-family: cursive;
+
+    }
+    20% {
+      color: #0b0da1;
+      font-family: impact;
+    }
+    40% {
+      color: aqua;
+      font-family: serif;
+    }
+    60% {
+color: red;
+    }
+    80% {
+    color: chocolate;
+    } 
+    100%{
+    color: green;
+    }
+}
+
+
+
+
     .slide {
         animation: sliding 5s ease;
     }
 
 @keyframes sliding {
     from {
+        color: aqua;
         transform: translateX(-100%);
         opacity: 0;
     }
@@ -46,33 +85,33 @@
     }
 
     .phone-card {
-        animation: appear 0.7s ease-out;
+        animation: appear 2s ease;
     }
     @keyframes appear {
         0%{
-            width: 5px;
+            width: 5%;
             transform: scale(0.2);
             opacity: 0;
 
         }
         25% {
-            width: 10px;
+            width: 10%;
             transform: scale(1.4);
             opacity: 0.25;
         }
         50% {
             transform: scale(0.6);
-            width: 25px;
+            width: 25%;
             opacity: 0.5;
         }
         75% {
             transform: scale(0.8);
-            width: 50px;
+            width: 50%;
             opacity: 0.75;
         }
         100% {
             transform: scale(1.o);
-            width: auto;
+            width: 75%;
             opacity: 1;
         }
     }
@@ -96,4 +135,49 @@ to {
     transform: translateY(0);
     opacity: 1;
 }
+}
+.comments {
+    
+    animation: breeze 9s ease;
+}
+@keyframes breeze {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+        scroll-timeline-axis: 5px;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#you{
+    
+    animation: change 3s ease-in-out;
+
+}
+@keyframes change {
+    0% {
+        transform: translateY(50px);
+        color: aqua;
+    }
+    25% {
+        transform: translateY(100px);
+        
+        color: red;
+    }
+     50%{
+        transform: rotateY(150px);
+        color: blue;
+        
+
+     }
+     75%{
+        transform: translateY(100px);
+        color: chartreuse;
+     }
+     100% {
+        transform: translateY(0);
+        color: black;
+     }
 }
