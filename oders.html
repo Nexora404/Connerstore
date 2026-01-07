@@ -1,11 +1,149 @@
  <html>
  <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
  </head>
- <h1
+ <h1  class="nu" id="you"
   style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> your oders </h1>
 
+<body>
+<nav>
+    <li class="navigation">
+      <a class="nav-item" href="index.html">home</a>
+      <a class="nav-item" href="oders.html">oders</a>
+      <a class="nav-item" href="support.html">support</a>
+      <a class="nav-item" href="account.html">account</a>
+    </li>
+  </nav>
+  <h4 style="font-size: larger;
+  font-family: sans-serif;
+  color: #1900ff;">your current oder status </h4>
+<div id="active-ordes">
+  <p style="color: red;">once you order your oder will appear here </p>
+  <table id="oder-table" border="1">
+    <th >phone type</th>
+    <th >price</th>
+    <th >status</th>
+    <tr>
+      <td id="oders-phone"> you have no active oders
+        <p class="formphone"></p>
+      </td>
+      <td id="oders-phone">0.0</td>
+      <td id="orders-status">
+        <p>not purchased</p></td>
+    </tr>
 
+  </table>
+</div>
+
+
+
+
+
+
+
+
+<h2>The following content involves you</h2>
+<h2 class="source">Customer comments from X, Tiktok, Instagram
+</h2>
+<div class="comments"> 
+  <p class="name">john@dem --- x.com</p>
+  <div class="message-pos ">
+    I enjoy using your services I got a samsung S25 and its worling perfectly you are the best company <br>
+    want a good phone at an amaizing price connerstore is the place to go 
+  </div>
+</div>
+<div class="comments">
+  <p class="name"> jame@coolkid --- youtube</p>
+  <div class="message-pos">
+    I saw your ad then i decided to try out your product experience was good and i still 
+    use your techno phone till date <br>
+    may you help million others out there 
+  </div>
+</div>
+<div class="comments">
+  <p class="name">mary---tiktok</p>
+  <div class="message-pos">
+    what a good company i really wish you can reach more poeple you guys 
+    are the best . <br>
+    from your biggest customer in 2025. 
+  </div>
+</div>
+
+
+  <h2 style="font-size: 50px ; 
+  color: brown; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+  Completion rate in 2025</h2>
+  <div class="aside-content">
+
+  <div class="chart-2">
+      
+<canvas id="completion" >
+
+</canvas>
+
+</div>
+<aside  class="comp-explanation">
+
+    <h2 class="abc">completion rate breakdown </h2>
+    <p class="asidetext">
+      in <strong>2025</strong> we  made an improvment in our complition rate as compared to the year 2024.
+      <br>
+      <br> 
+      In 2024 we had a <strike>84</strike> percentage complete rate which was not good . The completion rate is 
+      expected to go up due to improvments in our services 
+      <br>
+      According to the chart <i>which was hard to make</i> we copmleted more than 90 percentage of the oders we got.
+      canceled oders were due to miss press or ammatures playing with the web . 
+      <br> <br> 
+      Not <strong>completed</strong> oders were due to people miss filling oders or wrong submittion methods. 
+      also unlnown locations leads to us failing to deliver to those locations .
+      <br> <br> 
+      <p class="conc"> Conner store does its level best to ensure each and every customer is satisfied </p>
+    </p>
+  </aside>
+</div>
+
+
+  <h2 style="color: hsl(36, 96%, 51%); 
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">phone oders in 2025</h2>
+  <div class="aside-content">
+  <div class="chart-2">
+  <canvas id="chart" >
+
+  </canvas>
+  
+  </div>
+  <aside class="comp-explanation">
+    <h2 class="abc">2025 Oders Wrapp</h2>
+    <p class="asidetext">
+In 2025 most people purchased <strong>iphone</strong> with a very huge oder rate as compared to other phones.
+the more recent model i phone 17 pro was number one compared to other versions pf iphones . 
+<br> <br>
+Iphone has really come and stole the heart of our customers almost <strong>500</strong> iphones were sold this year.
+we sold iphones ranging from iphone 10, 11,12,13,14 , 15,16and the most recent 17 . 
+<br> <br>
+<strong>Techno</strong> followed next a rasing star compamy which has released many kind of phones we have sold 
+almost 300 phones of this kind . 
+<h4>Top 3 sold tecno phones</h4>
+1. Tecno spark 40 
+<br>
+2. Tecno cammon 40 
+<br>
+3. Tecnno slim X
+<br>
+<br>
+samsung and one plus come next and least sold was oppo . oppo didnt impress this term 
+    </p>
+  </aside>
+
+  
+  
+</div>
+
+
+</body>
  
  <div id="confirm-msg">
     wait as we confirm your payment we will get to you in the space of two or three days. 
@@ -13,4 +151,40 @@
   </div>
 
 <a href="index.html">home </a>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded' , ()  =>{
+    //phone oders 2025 
+  const ctx = document.getElementById('chart');
+  new Chart( ctx, {
+    type : 'bar',
+    data : {
+      labels : [ 'samsung', 'iphone', 'oppo', 'tecno', 'oneplus'],
+      datasets : [{
+        label : 'phone type',
+        data : ['120', '400', '100', '250', '150'],
+        color : 'red',
+        backgroundColor : 'yellow',
+        
+      
+      }]
+    }
+  });
+//percentage of completion 
+const comp = document.getElementById('completion');
+new Chart(comp, {
+  type : 'doughnut',
+  data : {
+    labels : ['completed', 'canceled' , 'not completed'],
+    datasets : [{
+      label : 'complation rate',
+      data : ['94', '3', '3'],
+    }]
+  }
+})
+});
+</script>
+
+<script src="script.js"></script>
   </html>
